@@ -1,5 +1,6 @@
 import path from 'path'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import CompressionPlugin from 'compression-webpack-plugin'
 var webpack = require("webpack");
 
 const rules = [
@@ -46,7 +47,8 @@ const config = {
   module: { rules },
   plugins: [
     new ExtractTextPlugin('[name].bundle.css'),
-    //new webpack.optimize.UglifyJsPlugin({minimize: true})
+    new webpack.optimize.UglifyJsPlugin({minimize: true}),
+    new CompressionPlugin()
   ]
 
 }
