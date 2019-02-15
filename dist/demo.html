@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
+﻿<!DOCTYPE html><html><head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Markdown Plus</title>
+    <title>index.html</title>
     <!--<link href="icon.png" rel="shortcut icon" type="image/png"/>-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.layout/1.4.3/layout-default.css">
@@ -27,8 +25,200 @@
         text-align: left !important;
       }
     </style>
-  </head>
-  <body>
+  </head><body><xmp id='saved' style='visibility: hidden'>[toc]
+
+
+快捷键
+---------------------------
+撤销：Ctrl/Command + Z
+重做：Ctrl/Command + Y
+加粗：Ctrl/Command + B
+斜体：Ctrl/Command + I
+标题：Ctrl/Command + Shift + H
+无序列表：Ctrl/Command + Shift + U
+有序列表：Ctrl/Command + Shift + O
+检查列表：Ctrl/Command + Shift + C
+插入代码：Ctrl/Command + Shift + K
+插入链接：Ctrl/Command + Shift + L
+插入图片：Ctrl/Command + Shift + G
+
+标题
+---------------------------
+
+# 1级标题
+
+## 2级标题
+
+### 3级标题
+
+#### 四级标题 
+ 
+##### 五级标题  
+
+###### 六级标题
+
+
+文本样式
+---------------------------
+
+*强调文本* _强调文本_
+
+**加粗文本** __加粗文本__
+
+==标记文本==
+
+~~删除文本~~
+
+> 引用文本
+
+H~2~O is是液体。
+
+2^10^ 运算结果是 1024。
+
+
+
+列表
+---------------------------
+
+- 项目
+  * 项目
+    + 项目
+
+1. 项目1
+2. 项目2
+3. 项目3
+
+- [ ] 计划任务
+- [x] 完成任务
+
+
+
+链接
+---------------------------
+
+链接: [link](https://mp.csdn.net).
+
+图片: ![Alt](https://avatar.csdn.net/7/7/B/1_ralf_hx163com.jpg)
+
+带尺寸的图片: ![Alt](https://avatar.csdn.net/7/7/B/1_ralf_hx163com.jpg =30x30)
+
+居中的图片: ![Alt](https://avatar.csdn.net/7/7/B/1_ralf_hx163com.jpg#pic_center)
+
+居中并且带尺寸的图片: ![Alt](https://avatar.csdn.net/7/7/B/1_ralf_hx163com.jpg#pic_center =30x30)
+
+
+代码片
+---------------------------
+
+下面展示一些 `内联代码片`。
+
+```
+// A code block
+var foo = 'bar';
+```
+
+```javascript
+// An highlighted block
+var foo = 'bar';
+```
+
+
+
+表格
+---------------------------
+
+项目     | Value
+-------- | -----
+电脑  | $1600
+手机  | $12
+导管  | $1
+
+
+| Column 1 | Column 2      |
+|:--------:| -------------:|
+| centered 文本居中 | right-aligned 文本居右 |
+
+
+
+自定义列表
+---------------------------
+
+Markdown
+:  Text-to-HTML conversion tool
+
+Authors
+:  John
+:  Luke
+
+
+
+注脚
+---------------------------
+
+一个具有注脚的文本。[^1]
+
+[^1]: 注脚的解释
+
+
+
+注释
+---------------------------
+
+Markdown将文本转换为 HTML。
+
+*[HTML]:   超文本标记语言
+
+
+
+LaTeX 数学公式
+---------------------------
+
+Gamma公式展示 `$\Gamma(n) = (n-1)!\quad\forall
+n\in\mathbb N$` 是通过 Euler integral
+
+```katex
+\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
+```
+
+
+插入甘特图
+---------------------------
+
+```mermaid
+gantt
+        dateFormat  YYYY-MM-DD
+        title Adding GANTT diagram functionality to mermaid
+        section 现有任务
+        已完成               :done,    des1, 2014-01-06,2014-01-08
+        进行中               :active,  des2, 2014-01-09, 3d
+        计划中               :         des3, after des2, 5d
+```
+
+
+插入UML图
+------------
+```mermaid
+sequenceDiagram
+张三 ->> 李四: 你好！李四, 最近怎么样?
+李四-->>王五: 你最近怎么样，王五？
+李四--x 张三: 我很好，谢谢!
+李四-x 王五: 我很好，谢谢!
+Note right of 王五: 李四想了很长时间, 文字太长了<br/>不适合放在一行.
+
+李四-->>张三: 打量着王五...
+张三->>王五: 很好... 王五, 你怎么样?
+```
+
+插入Mermaid流程图
+--------
+```mermaid
+graph LR
+A[长方形] -- 链接 --> B((圆))
+A --> C(圆角长方形)
+B --> D{菱形}
+C --> D
+```
+</xmp>
     <script>
       var pos = location.pathname.lastIndexOf("/");
       document.title = location.pathname.substr(pos+1);
@@ -96,8 +286,6 @@ T3: 2014-01-02, 9d"></i>
           <i title="Help" class="fa fa-question-circle" data-remodal-target="help-modal"></i>
           <i title="About" class="fa fa-info-circle" data-remodal-target="about-modal"></i>
           <span id="save_file" style="cursor: pointer">保存文件</span>
-          <!--<span id="clear_cache" style="cursor: pointer">清除缓存</span>-->
-          <!--<span id="recover_cache" style="cursor: pointer">还原缓存</span>-->
         </div>
       </div>
       <div class="ui-layout-center">
@@ -106,16 +294,16 @@ T3: 2014-01-02, 9d"></i>
           <h2>Please enter an emoji code:</h2>
           <p>Examples: "smile", "whale", "santa", "panda_face", "dog", "truck" ...</p>
           <p>For a complete list, please check <a href="http://www.emoji-cheat-sheet.com/" target="_blank">Emoji Cheat Sheet</a>.</p>
-          <p><input class="form-control" id="emoji-code" placeholder="smile"/></p>
-          <br/><a data-remodal-action="cancel" class="remodal-cancel">Cancel</a>
+          <p><input class="form-control" id="emoji-code" placeholder="smile"></p>
+          <br><a data-remodal-action="cancel" class="remodal-cancel">Cancel</a>
           <a data-remodal-action="confirm" class="remodal-confirm" id="emoji-confirm">OK</a>
         </div>
         <div class="remodal" id="fa-modal" data-remodal-id="fa-modal"> <!-- Font Awesome modal -->
           <h2>Please enter a Font Awesome code:</h2>
           <p>Examples: "cloud", "flag", "car", "truck", "heart", "dollar" ...</p>
           <p>For a complete list, please check <a href="http://fontawesome.io/icons/" target="_blank">Font Awesome Icons</a>.</p>
-          <p><input class="form-control" id="fa-code" placeholder="heart"/></p>
-          <br/><a data-remodal-action="cancel" class="remodal-cancel">Cancel</a>
+          <p><input class="form-control" id="fa-code" placeholder="heart"></p>
+          <br><a data-remodal-action="cancel" class="remodal-cancel">Cancel</a>
           <a data-remodal-action="confirm" class="remodal-confirm" id="fa-confirm">OK</a>
         </div>
         <div class="remodal" id="preferences-modal" data-remodal-id="preferences-modal" data-remodal-options="closeOnEscape: false, closeOnCancel: false, closeOnOutsideClick: false"> <!-- Preferences modal -->
@@ -194,15 +382,15 @@ T3: 2014-01-02, 9d"></i>
             <option value="vim">Vim</option>
             <option value="emacs">Emacs</option>
           </select></p>
-          <p>Gantt diagram axis format: <input id="gantt-axis-format" placeholder="%Y-%m-%d"/>
-            <br/><a href="https://github.com/mbostock/d3/wiki/Time-Formatting" target="_blank">Time formatting reference</a></p>
+          <p>Gantt diagram axis format: <input id="gantt-axis-format" placeholder="%Y-%m-%d">
+            <br><a href="https://github.com/mbostock/d3/wiki/Time-Formatting" target="_blank">Time formatting reference</a></p>
           <p>Custom CSS files: <textarea id="custom-css-files" wrap="off" placeholder="https://cdn.example.com/file.css" title="Multiple files should be separated by line breaks"></textarea>
-            <br/><span class="hint">(You need to restart the editor to apply the CSS files)</span>
-            <br/><a href="https://github.com/tylingsoft/markdown-plus-themes" target="_blank">Markdown Plus themes</a></p>
+            <br><span class="hint">(You need to restart the editor to apply the CSS files)</span>
+            <br><a href="https://github.com/tylingsoft/markdown-plus-themes" target="_blank">Markdown Plus themes</a></p>
           <p>Custom JS files: <textarea id="custom-js-files" wrap="off" placeholder="https://cdn.example.com/file.js" title="Multiple files should be separated by line breaks"></textarea>
-            <br/><span class="hint">(You need to restart the editor to apply the JS files)</span>
-            <br/><a href="https://github.com/tylingsoft/markdown-plus-plugins" target="_blank">Markdown Plus plugins</a></p>
-          <br/><a data-remodal-action="confirm" class="remodal-confirm">OK</a>
+            <br><span class="hint">(You need to restart the editor to apply the JS files)</span>
+            <br><a href="https://github.com/tylingsoft/markdown-plus-plugins" target="_blank">Markdown Plus plugins</a></p>
+          <br><a data-remodal-action="confirm" class="remodal-confirm">OK</a>
         </div>
         <div class="remodal" data-remodal-id="help-modal"> <!-- help modal -->
           <h2>Markdown Plus help</h2>
@@ -210,14 +398,14 @@ T3: 2014-01-02, 9d"></i>
           <p><a href="https://guides.github.com/features/mastering-markdown/" target="_blank">Markdown Basics</a></p>
           <p><a href="https://help.github.com/articles/github-flavored-markdown/" target="_blank">GitHub Flavored Markdown</a></p>
           <p>If none of the above solves your problem, please <a target="_blank" href="http://tylingsoft.com/contact/">contact us</a>.</p>
-          <br/><a data-remodal-action="confirm" class="remodal-confirm">OK</a>
+          <br><a data-remodal-action="confirm" class="remodal-confirm">OK</a>
         </div>
         <div class="remodal" data-remodal-id="about-modal"> <!-- about modal -->
           <h2>Markdown Plus</h2> Version 2.x
           <p>Markdown editor with extra features.</p>
           <p>Copyright © 2015 - 2017 <a href="http://tylingsoft.com" target="_blank">Tylingsoft</a>.</p>
           <p>Home page: <a href="http://tylingsoft.com/markdown-plus/" target="_blank">http://tylingsoft.com/markdown-plus/</a>.</p>
-          <br/><a data-remodal-action="confirm" class="remodal-confirm">OK</a>
+          <br><a data-remodal-action="confirm" class="remodal-confirm">OK</a>
         </div>
       </div>
       <div class="ui-layout-east">
@@ -225,11 +413,6 @@ T3: 2014-01-02, 9d"></i>
       </div>
     </div>
 
-    <script type="application/javascript" src="https://cdn.jsdelivr.net/gh/wzjwhut/markdown-editor@05ce3fe85e2fe3dbfcb73b6febba4d9134a2a7db/dist/index.bundle.js?r=1111111111111111"></script>
-    <!--<script src="../dist/index.bundle.js"></script>-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js"></script>
+    <script type="application/javascript" src="https://cdn.jsdelivr.net/gh/wzjwhut/markdown-editor@05ce3fe85e2fe3dbfcb73b6febba4d9134a2a7db/dist/index.bundle.js?r=1111111111111111"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.layout/1.4.3/jquery.layout.min.js"></script>
-    <xmp id='saved' style='visibility: hidden'></xmp>
-  </body>
-</html>
+    <script src="https://cdn.jsdelivr.net/jquery.layout/1.4.3/jquery.layout.min.js"></script></body></html>

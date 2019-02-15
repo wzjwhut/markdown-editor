@@ -4,6 +4,9 @@ import saveAs from './FileSaver.js'
 console.log("index.bundle entry");
 
 window.$ = window.jQuery = $
+let pos = location.pathname.lastIndexOf("/");
+var fileName = location.pathname.substr(pos+1);
+var cache = '';
 var htmlHead = $('head').html();
 var htmlBody = $('body').html();
 var md = localStorage.getItem(location.pathname);
@@ -25,15 +28,22 @@ $(() => {
   })
 
   $('#save_file').click(() => {
-    let md = editor.getValue()
+    let md = editor.getValue();
     let html = '\ufeff<!DOCTYPE html><html><head>' + htmlHead + '</head><body>' +
       '<xmp id=\'saved\' style=\'visibility: hidden\'>' + md + '</xmp>' +
       htmlBody + includeJS + '</body></html>'
     let blob = new Blob([html], {type: 'text/plain;charset=UTF-8'});
-    let pos = location.pathname.lastIndexOf("/");
-    saveAs(blob, location.pathname.substr(pos+1))
+    saveAs(blob, fileName);
     localStorage.removeItem(location.pathname);
   });
+
+  // $('#clear_cache').click(() => {
+  //
+  // });
+  //
+  // $('#recover_cache').click(() => {
+  //
+  // });
 
   require('./init')
   require('./preferences')
