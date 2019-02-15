@@ -1,6 +1,6 @@
 import Engine from './engine'
 
-const options = { html: true, linkify: true }
+const options = { html: true, linkify: true, breaks:true }
 const plugins = [
   'mark', 'ins', 'sub', 'sup', 'deflist', 'abbr', 'footnote', 'container',
   'github-toc', 'emoji', 'font-awesome', 'task-list', 'source-map', 'highlight',
