@@ -6,6 +6,11 @@ console.log("index.bundle entry");
 window.$ = window.jQuery = $
 let pos = location.pathname.lastIndexOf("/");
 var fileName = location.pathname.substr(pos+1);
+if(fileName == null || fileName == undefined || fileName.length == 0){
+  fileName = "demo.html";
+}else if(!fileName.endsWith(".html")){
+  fileName = fileName + ".html";
+}
 var cache = '';
 
 var md = localStorage.getItem(location.pathname);
