@@ -7,12 +7,15 @@ window.$ = window.jQuery = $
 let pos = location.pathname.lastIndexOf("/");
 var fileName = location.pathname.substr(pos+1);
 var cache = '';
-var htmlHead = $('head').html();
-var htmlBody = $('body').html();
+
 var md = localStorage.getItem(location.pathname);
 if (md == null || md.length == 0) {
   md = $('#saved').html();
 }
+$('#saved').remove();
+var htmlHead = $('head').html();
+var htmlBody = $('body').html();
+
 const includeJS = '<script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js"></script>\n' +
   '    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>\n' +
   '    <script src="https://cdn.jsdelivr.net/jquery.layout/1.4.3/jquery.layout.min.js"></script>'
