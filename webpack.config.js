@@ -46,9 +46,9 @@ const config = {
   },
   module: { rules },
   plugins: [
-    new ExtractTextPlugin('[name].bundle.css'),
-    new webpack.optimize.UglifyJsPlugin({minimize: true}),
-    new CompressionPlugin()
+    new ExtractTextPlugin('[name].bundle.css')
+    // new webpack.optimize.UglifyJsPlugin({minimize: true}),
+    // new CompressionPlugin()
   ]
 
 }

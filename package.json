@@ -15,7 +15,8 @@
     "jquery": "2.2.4",
     "js-cookie": "^2.1.4",
     "lodash": "^4.17.4",
-    "markdown-core": "^1.1.0"
+    "markdown-core": "^1.1.0",
+    "katex": "^0.10.0"
   },
   "keywords": [
     "markdown",
@@ -44,7 +45,7 @@
     "babel-plugin-transform-remove-strict-mode": "^0.0.2",
     "babel-preset-env": "^1.5.1",
     "css-loader": "^0.28.4",
-    "extract-text-webpack-plugin": "^2.1.0",
+    "extract-text-webpack-plugin": "^2.1.2",
     "standard": "^10.0.2",
     "style-loader": "^0.18.1",
     "webpack": "^2.6.1",

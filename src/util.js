@@ -1,6 +1,6 @@
 import Cookies from 'js-cookie'
 import { debounce } from 'lodash'
-import mdc from 'markdown-core/src/index-browser'
+import mdc from '../markdown-core/src/index-browser'
 
 import layout from './layout'
 import editor from './editor'

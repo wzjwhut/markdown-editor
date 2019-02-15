@@ -1,6 +1,6 @@
 import Cookies from 'js-cookie'
 import $ from 'jquery'
-import mdc from 'markdown-core/src/index-browser'
+// import mdc from 'markdown-core/src/index-browser'
 
 import layout from './layout'
 import { getPreviewWidth, lazyChange } from './util'
@@ -58,10 +58,10 @@ const loadPreferences = () => {
 
   loadEditorTheme()
 
-  const mdcPreferences = mdc.loadPreferences()
-  $('input#gantt-axis-format').val(mdcPreferences['gantt-axis-format'])
+  //const mdcPreferences = mdc.loadPreferences()
+  //$('input#gantt-axis-format').val(mdcPreferences['gantt-axis-format'])
 
-  loadCustomFiles()
+  //loadCustomFiles()
 }
 
 const preferencesChanged = () => {
@@ -72,7 +72,7 @@ const mdp = { preferencesChanged, loadPreferences }
 
 $(() => {
   // load preferences
-  mdp.loadPreferences()
+  //mdp.loadPreferences()
 
   // change preferences
   $(document).on('confirmation', '#preferences-modal', () => {
