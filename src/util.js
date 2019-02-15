@@ -8,7 +8,7 @@ import editor from './editor'
 const getPreviewWidth = () => {
   let previewWidth = Cookies.get('editor-versus-preview')
   if (previewWidth === undefined) {
-    previewWidth = '50%'
+    previewWidth = globalConfig.previewWidth
   }
   return previewWidth
 }
