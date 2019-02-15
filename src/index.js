@@ -1,6 +1,8 @@
 import $ from 'jquery'
 import saveAs from './FileSaver.js'
 
+console.log("index.bundle entry");
+
 window.$ = window.jQuery = $
 var htmlHead = $('head').html();
 var htmlBody = $('body').html();
