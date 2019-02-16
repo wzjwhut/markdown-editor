@@ -40,6 +40,7 @@ $(document).ready( function(){
     let blob = new Blob([html], {type: 'text/plain;charset=UTF-8'});
     saveAs(blob, globalConfig.getFileName());
     localStorage.removeItem(location.pathname);
+    $('#save-flag').hide();
   });
 
   $('#save-cache').click(() => {
