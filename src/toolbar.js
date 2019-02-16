@@ -1,4 +1,4 @@
-import $ from 'jquery'
+// import $ from 'jquery'
 
 import editor from './editor'
 import { getNormalPreviewWidth } from './util'
@@ -140,6 +140,21 @@ const registerToolBarEvents = () => {
   })
 
   $('#toggle-editor').click(() => {
+    if(gViewMode === "all"){
+      gViewMode = "preview";
+      $('#editor-bar').addClass('my-disable-click');
+      layout.sizePane('east', "100%")
+    }else if(gViewMode === "preview"){
+      gViewMode = "all";
+      $('#editor-bar').removeClass('my-disable-click');
+      layout.sizePane('east', "50%")
+    }else if(gViewMode === "editor"){
+      gViewMode = "preview";
+      $('#editor-bar').addClass('my-disable-click');
+      layout.sizePane('east', "100%")
+    }
+    return;
+
     if (layout.panes.center.outerWidth() < 8) { // editor is hidden
       layout.sizePane('east', getNormalPreviewWidth())
     } else {
@@ -147,7 +162,24 @@ const registerToolBarEvents = () => {
     }
   })
 
+
+
   $('#toggle-preview').click(() => {
+    if(gViewMode === "all"){
+      gViewMode = "editor";
+      $('#editor-bar').removeClass('my-disable-click');
+      layout.sizePane('east', 1)
+    }else if(gViewMode === "preview"){
+      gViewMode = "all";
+      $('#editor-bar').removeClass('my-disable-click');
+      layout.sizePane('east', "50%")
+    }else if(gViewMode == "editor"){
+      gViewMode = "all";
+      $('#editor-bar').removeClass('my-disable-click');
+      layout.sizePane('east', "50%")
+    }
+    return;
+
     if (layout.panes.east.outerWidth() < 8) { // preview is hidden
       layout.sizePane('east', getNormalPreviewWidth())
     } else {

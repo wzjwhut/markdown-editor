@@ -1,5 +1,5 @@
 import Cookies from 'js-cookie'
-import $ from 'jquery'
+// import $ from 'jquery'
 // import mdc from 'markdown-core/src/index-browser'
 
 import layout from './layout'

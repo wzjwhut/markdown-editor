@@ -2017,7 +2017,7 @@ extglob@^2.0.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-extract-text-webpack-plugin@^2.1.0:
+extract-text-webpack-plugin@^2.1.2:
   version "2.1.2"
   resolved "http://registry.npm.taobao.org/extract-text-webpack-plugin/download/extract-text-webpack-plugin-2.1.2.tgz#756ef4efa8155c3681833fbc34da53b941746d6c"
   integrity sha1-dW7076gVXDaBgz+8NNpTuUF0bWw=

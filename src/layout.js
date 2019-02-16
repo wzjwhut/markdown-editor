@@ -1,8 +1,10 @@
-import $ from 'jquery'
+// import $ from 'jquery'
 
 import editor from './editor'
 import { getPreviewWidth, lazyChange } from './util'
 
+// console.log("" + $('#mdp-container'));
+// console.log("" + $('#mdp-container').layout);
 const layout = $('#mdp-container').layout({ // create 3-panels layout
   resizerDblClickToggle: false,
   resizable: false,

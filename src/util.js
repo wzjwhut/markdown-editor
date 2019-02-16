@@ -4,21 +4,44 @@ import mdc from '../markdown-core/src/index-browser'
 
 import layout from './layout'
 import editor from './editor'
+var previewWidth;
+
+
+if(globalConfig.defaultViewMode === 'preview'){
+  gViewMode = "preview";
+}else if(globalConfig.defaultViewMode === 'editor'){
+  gViewMode = "editor";
+}else{
+  gViewMode = "all";
+}
 
 const getPreviewWidth = () => {
-  let previewWidth = Cookies.get('editor-versus-preview')
-  if (previewWidth === undefined) {
-    previewWidth = globalConfig.previewWidth
+  console.log("getPreviewWidth");
+
+  if(gViewMode === 'preview'){
+    return "100%";
+  }else if(gViewMode === 'editor'){
+    return "1";
+  }else{
+    return "50%";
   }
-  return previewWidth
+
+  // if (previewWidth === undefined) {
+  //   previewWidth = "50%";
+  //   return globalConfig.previewWidth
+  // }
+  // return previewWidth
 }
 
 // neither editor or preview is hidden
 const getNormalPreviewWidth = () => {
+  console.log("getNormalPreviewWidth");
+  return "50%";
   let previewWidth = getPreviewWidth()
   if (previewWidth === '1' || previewWidth === '100%') {
     previewWidth = '50%'
   }
+  console.log("normal preview width: " + previewWidth);
   return previewWidth
 }
 
