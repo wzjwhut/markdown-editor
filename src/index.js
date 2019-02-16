@@ -35,7 +35,7 @@ $(document).ready( function(){
   $('#save_file').click(() => {
     let md = editor.getValue();
     let html = '\ufeff<!DOCTYPE html><html><head>' + htmlHead + '</head><body>' +
-      '<xmp id=\'saved\' style=\'visibility: hidden\'>' + md + '</xmp>' +
+      '<xmp id="saved" style="visibility: hidden;display:none">' + md + '</xmp>' +
       htmlBody + includeJS + '</body></html>'
     let blob = new Blob([html], {type: 'text/plain;charset=UTF-8'});
     saveAs(blob, globalConfig.getFileName());
