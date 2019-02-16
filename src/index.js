@@ -34,9 +34,9 @@ $(document).ready( function(){
 
   $('#save_file').click(() => {
     let md = editor.getValue();
-    let html = '\ufeff<!DOCTYPE html><html><head>' + htmlHead + '</head><body>' +
+    let html = '\ufeff<!DOCTYPE html>\r\n<html>\r\n<head>\r\n' + htmlHead + '\r\n</head>\r\n<body>\r\n' +
       '<xmp id="saved" style="visibility: hidden;display:none">' + md + '</xmp>' +
-      htmlBody + includeJS + '</body></html>'
+      htmlBody + includeJS + '\r\n</body>\r\n</html>'
     let blob = new Blob([html], {type: 'text/plain;charset=UTF-8'});
     saveAs(blob, globalConfig.getFileName());
     localStorage.removeItem(location.pathname);

@@ -1,7 +1,10 @@
-﻿<!DOCTYPE html><html><head>
+﻿<!DOCTYPE html>
+<html>
+<head>
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>index%20(4).html</title>
+  <title>index.html</title>
   <!--<link href="icon.png" rel="shortcut icon" type="image/png"/>-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.layout/1.4.3/layout-default.css">
@@ -42,7 +45,10 @@
       pointer-events: none;
     }
   </style>
-</head><body><xmp id="saved" style="visibility: hidden;display:none">[toc]
+
+</head>
+<body>
+<xmp id="saved" style="visibility: hidden;display:none">[toc]
 
 
 快捷键
@@ -317,15 +323,15 @@ T3: 2014-01-02, 9d"></i>
       </div>
       <div>
       <i title="Hide toolbar" class="fa fa-long-arrow-up" id="toggle-toolbar"></i>
-      <i title="Toggle editor" class="fa fa-long-arrow-left" id="toggle-editor"></i>
-      <i title="Toggle preview" class="fa fa-long-arrow-right" id="toggle-preview"></i>
-      <i title="Toggle preview" class="fa fa-save " id="save-cache"></i>
+      <i title="编辑" class="fa fa-long-arrow-left" id="toggle-editor"></i>
+      <i title="预览" class="fa fa-long-arrow-right" id="toggle-preview"></i>
+      <i title="保存草稿" class="fa fa-save " id="save-cache"></i>
       <span style="position:relative;"><i id="save-flag" class="my-red-point" style="display: none;"></i></span>
       <span id="save_file" style="margin-left:5px; cursor: pointer">保存文件</span>
       <!--<span id="clear_cache" style="cursor: pointer">清除缓存</span>-->
       <!--<span id="recover_cache" style="cursor: pointer">还原缓存</span>-->
 
-        <a href="https://wzjwhut.github.io/markdown-editor/" target="_blank"><i title="Toggle preview" class="fa fa-info-circle"></i></a>
+        <a href="https://wzjwhut.github.io/markdown-editor/" target="_blank"><i title="示例" class="fa fa-info-circle"></i></a>
       </div>
     </div>
   </div>
@@ -347,107 +353,7 @@ T3: 2014-01-02, 9d"></i>
       <br><a data-remodal-action="cancel" class="remodal-cancel">Cancel</a>
       <a data-remodal-action="confirm" class="remodal-confirm" id="fa-confirm">OK</a>
     </div>
-    <div class="remodal" id="preferences-modal" data-remodal-id="preferences-modal" data-remodal-options="closeOnEscape: false, closeOnCancel: false, closeOnOutsideClick: false"> <!-- Preferences modal -->
-      <h2>Markdown Plus Preferences</h2>
-      <p>Show toolbar: <select id="show-toolbar">
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-      </select></p>
-      <p>Editor : Preview <select id="editor-versus-preview">
-        <option value="100%">0 : 1</option>
-        <option value="66.6%">1 : 2</option>
-        <option value="50%">1 : 1</option>
-        <option value="33.3%">2 : 1</option>
-        <option value="1">1 : 0</option>
-      </select></p>
-      <p>Editor theme: <select id="editor-theme">
-        <option value="3024-day">3024-day</option>
-        <option value="3024-night">3024-night</option>
-        <option value="abcdef">abcdef</option>
-        <option value="ambiance-mobile">ambiance-mobile</option>
-        <option value="ambiance">ambiance</option>
-        <option value="base16-dark">base16-dark</option>
-        <option value="base16-light">base16-light</option>
-        <option value="bespin">bespin</option>
-        <option value="blackboard">blackboard</option>
-        <option value="cobalt">cobalt</option>
-        <option value="colorforth">colorforth</option>
-        <option value="default">default</option>
-        <option value="dracula">dracula</option>
-        <option value="duotone-dark">duotone-dark</option>
-        <option value="duotone-light">duotone-light</option>
-        <option value="eclipse">eclipse</option>
-        <option value="elegant">elegant</option>
-        <option value="erlang-dark">erlang-dark</option>
-        <option value="hopscotch">hopscotch</option>
-        <option value="icecoder">icecoder</option>
-        <option value="isotope">isotope</option>
-        <option value="lesser-dark">lesser-dark</option>
-        <option value="liquibyte">liquibyte</option>
-        <option value="material">material</option>
-        <option value="mbo">mbo</option>
-        <option value="mdn-like">mdn-like</option>
-        <option value="midnight">midnight</option>
-        <option value="monokai">monokai</option>
-        <option value="neat">neat</option>
-        <option value="neo">neo</option>
-        <option value="night">night</option>
-        <option value="panda-syntax">panda-syntax</option>
-        <option value="paraiso-dark">paraiso-dark</option>
-        <option value="paraiso-light">paraiso-light</option>
-        <option value="pastel-on-dark">pastel-on-dark</option>
-        <option value="railscasts">railscasts</option>
-        <option value="rubyblue">rubyblue</option>
-        <option value="seti">seti</option>
-        <option value="solarized">solarized</option>
-        <option value="the-matrix">the-matrix</option>
-        <option value="tomorrow-night-bright">tomorrow-night-bright</option>
-        <option value="tomorrow-night-eighties">tomorrow-night-eighties</option>
-        <option value="ttcn">ttcn</option>
-        <option value="twilight">twilight</option>
-        <option value="vibrant-ink">vibrant-ink</option>
-        <option value="xq-dark">xq-dark</option>
-        <option value="xq-light">xq-light</option>
-        <option value="yeti">yeti</option>
-        <option value="zenburn">zenburn</option>
-      </select></p>
-      <p>Editor font size: <select id="editor-font-size">
-        <option value="8">8px</option><option value="9">9px</option><option value="10">10px</option><option value="11">11px</option>
-        <option value="12">12px</option><option value="13">13px</option><option value="14">14px</option><option value="15">15px</option>
-        <option value="16">16px</option><option value="17">17px</option><option value="18">18px</option><option value="20">20px</option>
-        <option value="24">24px</option><option value="32">32px</option><option value="48">48px</option><option value="64">64px</option>
-      </select></p>
-      <p>Key binding: <select id="key-binding">
-        <option value="default">Default</option>
-        <option value="sublime">Sublime</option>
-        <option value="vim">Vim</option>
-        <option value="emacs">Emacs</option>
-      </select></p>
-      <p>Gantt diagram axis format: <input id="gantt-axis-format" placeholder="%Y-%m-%d">
-        <br><a href="https://github.com/mbostock/d3/wiki/Time-Formatting" target="_blank">Time formatting reference</a></p>
-      <p>Custom CSS files: <textarea id="custom-css-files" wrap="off" placeholder="https://cdn.example.com/file.css" title="Multiple files should be separated by line breaks"></textarea>
-        <br><span class="hint">(You need to restart the editor to apply the CSS files)</span>
-        <br><a href="https://github.com/tylingsoft/markdown-plus-themes" target="_blank">Markdown Plus themes</a></p>
-      <p>Custom JS files: <textarea id="custom-js-files" wrap="off" placeholder="https://cdn.example.com/file.js" title="Multiple files should be separated by line breaks"></textarea>
-        <br><span class="hint">(You need to restart the editor to apply the JS files)</span>
-        <br><a href="https://github.com/tylingsoft/markdown-plus-plugins" target="_blank">Markdown Plus plugins</a></p>
-      <br><a data-remodal-action="confirm" class="remodal-confirm">OK</a>
-    </div>
-    <div class="remodal" data-remodal-id="help-modal"> <!-- help modal -->
-      <h2>Markdown Plus help</h2>
-      <p><a href="http://mdp.tylingsoft.com/" target="_blank">Online Sample</a></p>
-      <p><a href="https://guides.github.com/features/mastering-markdown/" target="_blank">Markdown Basics</a></p>
-      <p><a href="https://help.github.com/articles/github-flavored-markdown/" target="_blank">GitHub Flavored Markdown</a></p>
-      <p>If none of the above solves your problem, please <a target="_blank" href="http://tylingsoft.com/contact/">contact us</a>.</p>
-      <br><a data-remodal-action="confirm" class="remodal-confirm">OK</a>
-    </div>
-    <div class="remodal" data-remodal-id="about-modal"> <!-- about modal -->
-      <h2>Markdown Plus</h2> Version 2.x
-      <p>Markdown editor with extra features.</p>
-      <p>Copyright © 2015 - 2017 <a href="http://tylingsoft.com" target="_blank">Tylingsoft</a>.</p>
-      <p>Home page: <a href="http://tylingsoft.com/markdown-plus/" target="_blank">http://tylingsoft.com/markdown-plus/</a>.</p>
-      <br><a data-remodal-action="confirm" class="remodal-confirm">OK</a>
-    </div>
+
   </div>
   <div class="ui-layout-east">
     <article class="markdown-body" id="preview"></article>
@@ -461,5 +367,6 @@ T3: 2014-01-02, 9d"></i>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
 
-<!--<script src="../dist/index.bundle.js"></script>-->
-<script src="https://cdn.jsdelivr.net/gh/wzjwhut/markdown-editor@58e3921a2ab357c88c10a1a558b7328f0c190dc0/dist/index.bundle.js"></script></body></html>
+<script src="../dist/index.bundle.js"></script>
+</body>
+</html>
